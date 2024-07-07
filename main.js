@@ -43,7 +43,7 @@ function getRepos() {
           // repos Url:-
           let repoUrl = document.createElement("a");
           // creat repo url
-          repoUrl.appendChild(document.createTextNode("Visit"));
+          repoUrl.appendChild(document.createTextNode("Visit repo"));
           // append the url text to anchor tag
           repoUrl.href = `https://github.com/${theInput.value}/${repo.name}`;
           // add the hypertext refrence "href"
@@ -67,6 +67,13 @@ function getRepos() {
           // ----------------------------------------
           // make the info dynamic which means any github user can it
           console.log(repo.name);
+          // to style the link and the star
+          let info = document.createElement("div");
+          info.className = "info";
+          // appende
+          info.appendChild(repoUrl);
+          info.appendChild(repoStar);
+          mainDiv.appendChild(info);
         });
         theInput.value = "";
       })
