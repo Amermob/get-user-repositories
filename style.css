@@ -67,22 +67,9 @@ body {
 
 .repos-container {
     .show-repo {
-        p {
-            text-align: left;
-            text-transform: capitalize;
-            background-color: red;
-            padding: 10px 20px;
-            color: white;
-            width: fit-content;
-        }
-    }
-}
-
-.repos-container {
-    .show-repo {
-        .repo-box {
-            padding: 20px;
-            border: 2px solid #f44336;
+        .info {
+            display: flex;
+            justify-content: space-around;
         }
     }
 }
@@ -100,17 +87,37 @@ body {
 
 .repos-container {
     .show-repo {
+        p {
+            text-align: left;
+            text-transform: capitalize;
+            background-color: #f44336;
+            padding: 10px 20px;
+            color: white;
+            width: fit-content;
+        }
+    }
+}
+
+.repos-container {
+    .show-repo {
+        .repo-box {
+            padding: 20px;
+            border: 2px solid #f44336;
+        }
+    }
+}
+
+
+
+.repos-container {
+    .show-repo {
         .repo-box {
             a {
+                min-width: fit-content;
                 text-decoration: none;
                 padding: 10px 20px;
                 background-color: #f44336;
                 color: white;
-                transition: 0.4s;
-                -webkit-transition: 0.4s;
-                -moz-transition: 0.4s;
-                -ms-transition: 0.4s;
-                -o-transition: 0.4s;
             }
         }
     }
@@ -119,8 +126,10 @@ body {
 .repos-container {
     .show-repo {
         .repo-box {
-            a:hover {
-                outline: 2px solid black;
+            span {
+                text-decoration: none;
+                padding: 10px;
+                background-color: #fff;
             }
         }
     }
