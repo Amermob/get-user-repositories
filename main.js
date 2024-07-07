@@ -33,8 +33,11 @@ function getRepos() {
           // creat an element
           let mainDiv = document.createElement("div");
           // put the text inside the element
-          mainDiv.appendChild(document.createTextNode(repo.name));
+          // mainDiv.appendChild(document.createTextNode(repo.name));
+          let repoText = document.createElement("h2");
+          repoText.appendChild(document.createTextNode(repo.name));
           // append the element into the reposData
+          mainDiv.appendChild(repoText);
           reposData.appendChild(mainDiv);
           // ----------------------------------------
           // repos Url:-
@@ -65,6 +68,11 @@ function getRepos() {
           // make the info dynamic which means any github user can it
           console.log(repo.name);
         });
+        theInput.value = "";
+      })
+      .catch(() => {
+        // if there is no github user with the same name
+        reposData.innerHTML = `<p>no user was found</p>`;
         theInput.value = "";
       });
   }
