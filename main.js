@@ -10,6 +10,11 @@ getRepo.onclick = function () {
   // main function
   getRepos();
 };
+theInput.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    getRepos();
+  }
+});
 
 function getRepos() {
   //if the
